@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Anton|Archivo+Narrow:400,600');
+* {
+  font-family: 'Archivo Narrow', sans-serif;
+}
+app-root {
+  background-image: url('./assets/images/oktoberfest-glass-md.png')
+}
+h1 {
+  font-family: 'Anton', sans-serif;
+  padding:40px;
+}
+

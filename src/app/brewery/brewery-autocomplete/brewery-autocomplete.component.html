@@ -1,0 +1,17 @@
+<mat-form-field>
+    <input
+      type="text"
+      matInput
+      [formControl]="breweryName"
+      [matAutocomplete]="auto"
+      placeholder="Find a Brewery"
+      />
+</mat-form-field>
+<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="goToBrewery($event.option.value.id)">
+  <mat-option *ngFor="let brewery of breweries" [value]="brewery">
+    {{brewery.name}}
+  </mat-option>
+</mat-autocomplete>
+
+
+

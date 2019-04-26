@@ -1,0 +1,21 @@
+<div  layout="row" layout-align="center" class="text-center container" *ngIf="breweryDetail">
+
+    <mat-card class="d-flex justify-content-center flex-column" >
+        <mat-card-header class="d-flex justify-content-center">
+          <mat-card-title>
+            {{ breweryDetail.name}}
+          </mat-card-title>
+          <mat-card-subtitle>
+            {{ breweryDetail.brewery_type | titlecase }}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="brewery-card_address">{{breweryDetail.street}} {{breweryDetail.city}}, {{breweryDetail.state}} {{breweryDetail.postal_code}}</p>
+            <p class="brewery-card_link"><a href="{{breweryDetail.website_url}}">visit the site</a></p>
+              <app-brew-map
+              class="d-flex justify-content-center"
+              [breweryDetail]="this.breweryDetail"></app-brew-map>
+        </mat-card-content>
+      </mat-card>
+
+</div>
