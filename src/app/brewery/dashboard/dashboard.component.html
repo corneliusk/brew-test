@@ -1,0 +1,18 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>User Info</mat-card-title>
+      <mat-card-subtitle>email address: {{ user }}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>Favorites</mat-card-title>
+      </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let favorite of favorites"><a [routerLink]="[ '/breweries', favorite.breweryId ]">{{favorite.breweryName}}</a> </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>

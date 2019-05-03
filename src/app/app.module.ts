@@ -8,11 +8,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { BreweryModule } from './brewery/brewery.module';
 import { RouterModule } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import { from } from 'rxjs';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatFormField, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatFormField, MatFormFieldModule, MatInputModule, MatCardModule } from '@angular/material';
 import {BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import {CollapseModule } from 'ngx-bootstrap/collapse';
+import {AngularFireModule} from '@angular/fire';
+import { AngularFirestoreModule}  from '@angular/fire/firestore';
+import { AngularFireAuthModule} from '@angular/fire/auth';
+import {environment } from '../environments/environment';
+import { AdminModule } from './admin/admin.module';
+import { CustomMaterialModule } from '@app/material/custom-material.module'
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -21,18 +28,23 @@ import {CollapseModule } from 'ngx-bootstrap/collapse';
   imports: [
     AppRoutingModule,
     HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {passThruUnknownUrl: true}),
     BreweryModule,
     BrowserModule,
+    CustomMaterialModule,
+    AdminModule,
     RouterModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatCardModule,
     BsDropdownModule.forRoot(),
-    CollapseModule.forRoot()
+    CollapseModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
 
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

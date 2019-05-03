@@ -1,7 +1,7 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 h1 {
   background: transparent url("../assets/images/oktoberfest-glass-md@2x.png") left center no-repeat;
-  background-size:contain;
+  background-size:60px;
   margin-top:20px;
   a {
     color:#000000;
@@ -10,28 +10,8 @@ h1 {
   }
 
 }
+nav#page-nav {
+  width:100%;
+  border-bottom:solid 1px #000000;
 
-.collapse {
-  /* setup transition however you like */
-  -webkit-transition: max-height 0.5s ease;
-  -moz-transition: max-height 0.5s ease;
-  -o-transition: max-height 0.5s ease;
-  -ms-transition: max-height 0.5s ease;
-  transition: max-height 0.5s ease;
-
-  /* override display, overflow and visibility */
-  display: block!important;
-  overflow: hidden!important;
-  visibility: visible!important;
-
-  max-height: 0;
-
-  &.in {
-    /* set max-height to something high so that
-    it can fit whatever you have inside your collapsible tag.
-    Not too high though, because the animation time will be based
-    on this value, so if it's too high the animation will be
-    very fast */
-    max-height: 400px;
-  }
 }

@@ -12,7 +12,8 @@
         <mat-card-content>
             <p class="brewery-card_address">{{breweryDetail.street}} {{breweryDetail.city}}, {{breweryDetail.state}} {{breweryDetail.postal_code}}</p>
             <p class="brewery-card_link"><a href="{{breweryDetail.website_url}}">visit the site</a></p>
-              <app-brew-map
+            <p class="brewery-card_favorite" *ngIf="isLoggedIn()"><button mat-icon-button (click)="toggleFavorite()"><mat-icon svgIcon="heart" class="favorite" [ngClass]='{"active":isFavorite}'></mat-icon></button></p>
+            <app-brew-map
               class="d-flex justify-content-center"
               [breweryDetail]="this.breweryDetail"></app-brew-map>
         </mat-card-content>

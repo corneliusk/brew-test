@@ -1,19 +1,21 @@
 <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <button matButton class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation"><img src="../assets/images/svg/menu.svg" alt=""></button>
-        <div [collapse]="isCollapsed" class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/brewery/create">Add a Brewery</a>
-              </li>
-          </ul>
-        </div>
-      </nav>    <div style="text-align:center">
-    <h1><a [routerLink]="[ '/' ]">{{ title }}</a></h1>
-  <app-brewery-autocomplete *ngIf="!router.url.includes('create')"></app-brewery-autocomplete>
-  <router-outlet></router-outlet>
+  <nav id="page-nav">
+      <button mat-icon-button  [matMenuTriggerFor]="menu"> <mat-icon svgIcon="menu"></mat-icon></button>
+      <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/brewery/create">Add a Brewery</button>
+          <button mat-menu-item routerLink="/dashboard">dashboard</button>
+          <button mat-menu-item (click)="toggleAuth()"> {{ loginMessage }} </button>
+      </mat-menu>
+
+  </nav>
+
+    <header class="page-header" matCard>
+      <div style="text-align:center">
+        <h1><a [routerLink]="[ '/' ]">{{ title }}</a></h1>
+        <app-brewery-autocomplete *ngIf="!router.url.includes('create')"></app-brewery-autocomplete>
+      </div>
+
+    </header>
+      <router-outlet></router-outlet>
+
 </div>

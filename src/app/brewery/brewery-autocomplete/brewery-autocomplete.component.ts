@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { BrewApiService } from 'src/app/brew-api.service';
-import { Brewery } from 'src/app/brewery';
+import { BrewApiService } from '@app/brew-api.service';
+import { Brewery } from '@app/brewery';
 import {FormControl} from '@angular/forms';
 import {MatInputModule, MatSelectTrigger} from '@angular/material';
 import {Observable, UnaryFunction} from 'rxjs';
 import {debounceTime, switchMap, distinctUntilChanged, mergeMap} from 'rxjs/operators'
 import { Router, ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-brewery-autocomplete',
   templateUrl: './brewery-autocomplete.component.html',
