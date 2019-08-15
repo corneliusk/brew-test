@@ -17,7 +17,7 @@ import { AngularFirestoreModule}  from '@angular/fire/firestore';
 import { AngularFireAuthModule} from '@angular/fire/auth';
 import {environment } from '../environments/environment';
 import { AdminModule } from './admin/admin.module';
-import { CustomMaterialModule } from '@app/material/custom-material.module'
+import { CustomMaterialModule } from './material/custom-material.module'
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 

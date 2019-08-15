@@ -5,7 +5,7 @@ import TileLayer from 'ol/layer/Tile';
 import Overlay from 'ol/Overlay';
 import OSM from 'ol/source/OSM';
 import {fromLonLat} from 'ol/proj.js'
-import { BreweryDetail } from '@app/brewery-detail';
+import { BreweryDetail } from '../../brewery-detail';
 import { map } from 'rxjs/operators';
 
 @Component({

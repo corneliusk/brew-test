@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Favorite } from '@app/favorite';
+import { Favorite } from '../app/favorite';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';

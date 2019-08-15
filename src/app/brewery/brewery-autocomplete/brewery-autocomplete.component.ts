@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BrewApiService } from '@app/brew-api.service';
-import { Brewery } from '@app/brewery';
+import { BrewApiService } from '../../brew-api.service';
+import { Brewery } from '@/brewery';
 import {FormControl} from '@angular/forms';
 import {MatInputModule, MatSelectTrigger} from '@angular/material';
 import {Observable, UnaryFunction} from 'rxjs';

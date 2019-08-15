@@ -4,7 +4,7 @@ import { BreweryDetailComponent } from './brewery/brewery-detail/brewery-detail.
 import { BreweryComponent } from './brewery/brewery/brewery.component';
 import { AddBreweryComponent } from './brewery/add-brewery/add-brewery.component';
 import { CanActivate } from '@angular/router';
-import {AdminRoutingModule} from '@app/admin/admin-routing.module'
+import {AdminRoutingModule} from './admin/admin-routing.module'
 import { AuthGuard } from './guards/auth.guard';
 import { DashboardComponent } from './brewery/dashboard/dashboard.component';
 const routes: Routes = [

@@ -9,9 +9,9 @@ import { BreweryAutocompleteComponent } from './brewery-autocomplete/brewery-aut
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule, MatAutocompleteModule, MatFormFieldModule, MatInputModule, MatSelectTrigger, MatListModule, MatSelectModule, MatCardMdImage, MatCardModule} from '@angular/material';
 import { AddBreweryComponent } from './add-brewery/add-brewery.component';
-import { AdminModule } from '@app/admin/admin.module';
+import { AdminModule } from '../admin/admin.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CustomMaterialModule } from '@app/material/custom-material.module';
+import { CustomMaterialModule } from '../material/custom-material.module';
 
 @NgModule({
   declarations: [

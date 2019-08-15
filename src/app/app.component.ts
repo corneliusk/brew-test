@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CollapseDirective } from 'ngx-bootstrap/collapse/public_api';
-import {AuthService} from "@app/auth.service";
+import {AuthService} from "./auth.service";
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 

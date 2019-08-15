@@ -5,8 +5,8 @@ import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { MatCardModule } from '@angular/material';
-import { AuthGuard } from '@app/guards/auth.guard';
-import { AuthService } from '@app/auth.service';
+import { AuthGuard } from '../guards/auth.guard';
+import { AuthService } from '../../app/auth.service';
 
 
 @NgModule({

@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { BrewApiService } from '@app/brew-api.service';
-import { BreweryDetail } from '@app/brewery-detail';
+import { BrewApiService } from '../../brew-api.service';
+import { BreweryDetail } from '../../brewery-detail';
 import {ActivatedRoute, Router} from '@angular/router';
 import { Location } from '@angular/common';
-import { FavoritesService } from '@app/favorites.service';
-import { AuthService } from '@app/auth.service';
-import { Favorite } from '@app/favorite';
+import { FavoritesService } from '../../favorites.service';
+import { AuthService } from '../../auth.service';
+import { Favorite } from '../../favorite';
 import { Observable } from 'rxjs';
 
 

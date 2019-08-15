@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FavoritesService } from '@app/favorites.service';
-import { Favorite } from '@app/favorite';
-import { AuthService } from '@app/auth.service';
+import { FavoritesService } from '../../favorites.service';
+import { Favorite } from '../../favorite';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-dashboard',
